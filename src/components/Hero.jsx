@@ -9,7 +9,7 @@ import { IoArrowForward } from "react-icons/io5";
 const Hero = () => {
   return (
     <section className="flex min-h-screen flex-wrap items-center bg-emerald-950 text-orange-50">
-      <div className="max-w-7xl mx-auto flex">
+      <div className="max-w-7xl mx-auto flex items-center">
         <div className="w-full py-8 md:w-1/2">
           <div className="mb-4 flex space-x-2">
             <img
