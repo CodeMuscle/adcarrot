@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import ProjectShowcase from "./components/ProjectShowcase";
 import Services from "./components/Services";
+import Team from "./components/Team";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Services />
       <ProjectShowcase />
       <AdAgencyPackages />
+      <Team />
     </div>
   );
 }
