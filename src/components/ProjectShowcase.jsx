@@ -38,26 +38,26 @@ const ProjectShowcase = () => {
               <table className="min-w-full text-lg lg:text-xl">
                 <tbody>
                   <tr>
-                    <td className="px-6 py-4 font-medium text-emerald-950">
+                    <td className="py-4 font-medium text-emerald-950">
                       Investment
                     </td>
-                    <td className="px-6 py-4 text-emerald-950">
+                    <td className="py-4 text-emerald-950">
                       {project.figures.investment}
                     </td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 font-medium text-emerald-950">
+                    <td className="py-4 font-medium text-emerald-950">
                       Duration
                     </td>
-                    <td className="px-6 py-4 text-emerald-950">
+                    <td className="py-4 text-emerald-950">
                       {project.figures.duration}
                     </td>
                   </tr>
                   <tr>
-                    <td className="px-6 py-4 font-medium text-emerald-950">
+                    <td className="py-4 font-medium text-emerald-950">
                       Outcome
                     </td>
-                    <td className="px-6 py-4 text-emerald-950">
+                    <td className="py-4 text-emerald-950">
                       {project.figures.outcome}
                     </td>
                   </tr>
