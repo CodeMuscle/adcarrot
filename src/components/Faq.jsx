@@ -11,15 +11,15 @@ const Faq = () => {
 
   return (
     <section className="mt-20" id="faq">
-      <div className="container min-h-screen mx-auto flex flex-col gap-12 p-8 lg:flex-row md:relative">
+      <div className="container mx-auto relative flex lg:flex-row flex-col gap-12">
         {/* Sticky FAQ */}
-        <div className="lg:w-1/3 md:sticky md:top-[65px]">
+        <div className="lg:flex flex-col gap-5 lg:w-1/3 h-fit lg:sticky md:top-24">
           {" "}
           {/* Adjusted top value */}
-          <h2 className="mb-8 text-4xl font-semibold tracking-tighter">
+          <h2 className="text-4xl font-semibold tracking-tighter">
             Frequently Asked Questions
           </h2>
-          <p className="mb-12 text-lg">{FAQ_DESCRIPTION}</p>
+          <p className="text-lg">{FAQ_DESCRIPTION}</p>
         </div>
 
         <div className="lg:w-2/3">

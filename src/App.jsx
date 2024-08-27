@@ -1,5 +1,6 @@
 import About from "./components/About";
 import AdAgencyPackages from "./components/AdAgencyPackages";
+import Contact from "./components/Contact";
 import Faq from "./components/Faq";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -10,7 +11,7 @@ import Testimonials from "./components/Testimonials";
 
 export default function App() {
   return (
-    <div className="overflow-y-hidden bg-orange-50 text-emerald-950 antialiased">
+    <div className="bg-orange-50 text-emerald-950 antialiased">
       <Navbar />
       <Hero />
       <About />
@@ -20,6 +21,7 @@ export default function App() {
       <Team />
       <Testimonials /> 
       <Faq />
+      <Contact />
     </div>
   );
 }
