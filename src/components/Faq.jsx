@@ -10,7 +10,7 @@ const Faq = () => {
   };
 
   return (
-    <section className="mt-20" id="faq">
+    <section className="my-20" id="faq">
       <div className="container mx-auto relative flex lg:flex-row flex-col gap-12">
         {/* Sticky FAQ */}
         <div className="lg:flex flex-col gap-5 lg:w-1/3 h-fit lg:sticky md:top-24">
