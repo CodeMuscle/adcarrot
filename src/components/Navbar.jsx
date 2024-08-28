@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.png";
-import { LINKS } from "../constants/index"
+import { LINKS } from "../constants/index";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,6 +43,11 @@ const Navbar = () => {
     });
   };
 
+  const linkVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <>
       <nav className="fixed z-10 w-full border-b border-orange-50/10 bg-emerald-950">
@@ -65,22 +71,39 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {isOpen && (
-        <div className="fixed inset-0 z-20 flex flex-col space-y-8 bg-emerald-950 px-20 pt-20 text-5xl font-bold uppercase text-emerald-100 lg:text-6xl">
-          <button
-            className="absolute right-4 top-4 rounded-full bg-emerald-900 p-2 tex-orange-50 lg:right-20"
-            type="button"
-            onClick={() => setIsOpen(false)}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: "-100%" }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: "-100%" }}
+            transition={{ duration: 0.5 }}
+            className="fixed inset-0 z-20 flex flex-col space-y-8 bg-emerald-950 px-20 pt-6 text-5xl font-bold uppercase text-emerald-100 lg:text-6xl"
           >
-            <FaTimes className="h-8 w-8" />
-          </button>
-          {LINKS.map((link) => (
-            <a href={link.id} key={link.id} className="transition-colors duration-500 hover:text-orange-500" onClick={() => handleLinkClick(link.id)}>
-              {link.name}
-            </a>
-          ))}
-        </div>
-      )}
+            <button
+              className="absolute right-4 top-14 rounded-full bg-emerald-900 p-2 text-orange-50 lg:right-20"
+              type="button"
+              onClick={() => setIsOpen(false)}
+            >
+              <FaTimes className="h-8 w-8" />
+            </button>
+            {LINKS.map((link, index) => (
+              <motion.a
+                variants={linkVariants}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                href={`#${link.id}`}
+                key={link.id}
+                className="transition-colors duration-500 hover:text-orange-500"
+                onClick={() => handleLinkClick(link.id)}
+              >
+                {link.name}
+              </motion.a>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
