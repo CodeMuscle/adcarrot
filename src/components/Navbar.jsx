@@ -81,7 +81,7 @@ const Navbar = () => {
             className="fixed inset-0 z-20 flex flex-col space-y-8 bg-emerald-950 px-20 pt-6 text-5xl font-bold uppercase text-emerald-100 lg:text-6xl"
           >
             <button
-              className="absolute right-4 top-14 rounded-full bg-emerald-900 p-2 text-orange-50 lg:right-20"
+              className="absolute right-4 top-10 rounded-full bg-emerald-900 p-2 text-orange-50 lg:right-20"
               type="button"
               onClick={() => setIsOpen(false)}
             >

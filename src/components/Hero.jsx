@@ -4,6 +4,8 @@ import profileImg2 from "../assets/profile2.jpeg";
 import profileImg3 from "../assets/profile3.jpg";
 import heroImg from "../assets/hero-image.png";
 
+import { motion } from "framer-motion";
+
 import { IoArrowForward } from "react-icons/io5";
 
 const Hero = () => {
@@ -12,35 +14,60 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto flex items-center">
         <div className="w-full py-8 md:w-1/2">
           <div className="mb-4 flex space-x-2">
-            <img
+            <motion.img
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
               src={profileImg1}
               className="h-12 w-12 rounded-full border border-orange-50"
               alt="Team Member 1"
             />
-            <img
+            <motion.img
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               src={profileImg2}
               className="h-12 w-12 rounded-full border border-orange-50"
               alt="Team Member 2"
             />
-            <img
+            <motion.img
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               src={profileImg3}
               className="h-12 w-12 rounded-full border border-orange-50"
               alt="Team Member 3"
             />
           </div>
-          <h1 className="text-4xl tracking-tighter md:text-5xl lg:text-7xl">
+          <motion.h1
+            inital={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl tracking-tighter md:text-5xl lg:text-7xl"
+          >
             We create impactful ads that
             <span className="text-orange-500"> elevate </span>
             your brand!
-          </h1>
-          <button className="mt-8 flex items-center gap-2 rounded-full bg-emerald-900 px-4 py-3 hover:bg-emerald-800">
+          </motion.h1>
+          <motion.button
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="mt-8 flex items-center gap-2 rounded-full bg-emerald-900 px-4 py-3 hover:bg-emerald-800"
+          >
             <span className="">Know More</span>
             <IoArrowForward />
-          </button>
+          </motion.button>
         </div>
 
         <div className="w-full md:w-1/2 lg:p-8">
-          <img src={heroImg} className="h-auto w-full" />
+          <motion.img
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            src={heroImg}
+            className="h-auto w-full"
+          />
         </div>
       </div>
     </section>
