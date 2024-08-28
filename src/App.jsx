@@ -2,6 +2,7 @@ import About from "./components/About";
 import AdAgencyPackages from "./components/AdAgencyPackages";
 import Contact from "./components/Contact";
 import Faq from "./components/Faq";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import ProjectShowcase from "./components/ProjectShowcase";
@@ -22,6 +23,7 @@ export default function App() {
       <Testimonials /> 
       <Faq />
       <Contact />
+      <Footer />
     </div>
   );
 }
