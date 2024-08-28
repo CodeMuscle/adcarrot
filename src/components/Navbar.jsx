@@ -94,9 +94,9 @@ const Navbar = () => {
                 animate="visible"
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 href={`#${link.id}`}
-                key={link.id}
+                key={index}
                 className="transition-colors duration-500 hover:text-orange-500"
-                onClick={() => handleLinkClick(link.id)}
+                onClick={(e) => handleLinkClick(e, link.id)}
               >
                 {link.name}
               </motion.a>
